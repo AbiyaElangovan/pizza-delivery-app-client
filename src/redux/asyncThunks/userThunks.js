@@ -15,7 +15,7 @@ export const loginUser = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/users/login`,
+        `https://pizza-server-three.vercel.app/api/users/login`,
         { email, password },
         config
       );
@@ -48,7 +48,7 @@ export const registerUser = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/users/register`,
+        `https://pizza-server-three.vercel.app/api/users/register`,
         {
           name,
           email,
@@ -90,7 +90,7 @@ export const verifyEmail = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/users/verify`,
+        `https://pizza-server-three.vercel.app/api/users/verify`,
         { email, verificationCode },
         config
       );
@@ -120,7 +120,7 @@ export const forgotPassword = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/users/forgotpassword`,
+        `https://pizza-server-three.vercel.app/api/users/forgotpassword`,
         { email },
         config
       );
@@ -153,7 +153,7 @@ export const resetPassword = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/users/resetpassword`,
+        `https://pizza-server-three.vercel.app/api/users/resetpassword`,
         { email, resetToken, newPassword, confirmNewPassword },
         config
       );
@@ -188,7 +188,7 @@ export const updateUserProfile = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/users/profile`,
+        `https://pizza-server-three.vercel.app/api/users/profile`,
         {
           name: formData.name,
           email: formData.email,
@@ -229,7 +229,7 @@ export const getUserDetails = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/users/profile`,
+        `https://pizza-server-three.vercel.app/api/users/profile`,
         config
       );
 
@@ -262,7 +262,7 @@ export const listUsers = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/users`,
+        `https://pizza-server-three.vercel.app/api/users`,
         config
       );
 
@@ -295,7 +295,7 @@ export const getUserDetailsById = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/users/${id}`,
+        `https://pizza-server-three.vercel.app/api/users/${id}`,
         config
       );
 
@@ -329,7 +329,7 @@ export const updateUserProfileById = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/users/${formData._id}`,
+        `https://pizza-server-three.vercel.app/api/users/${formData._id}`,
         {
           name: formData.name,
           email: formData.email,
@@ -368,7 +368,7 @@ export const deleteUserById = createAsyncThunk(
       };
 
       const { data } = await axios.delete(
-        `${import.meta.env.VITE_SERVER_URL}/users/${id}`,
+        `https://pizza-server-three.vercel.app/api/users/${id}`,
         config
       );
 

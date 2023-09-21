@@ -15,7 +15,7 @@ export const loginAdmin = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/admin/login`,
+        `https://pizza-server-three.vercel.app/api/admin/login`,
         { email, password },
         config
       );
@@ -45,7 +45,7 @@ export const registerAdmin = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/admin/register`,
+        `https://pizza-server-three.vercel.app/api/admin/register`,
         { name, email, password, confirmPassword },
         config
       );
@@ -84,7 +84,7 @@ export const updateAdminProfile = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/admin/profile`,
+        `https://pizza-server-three.vercel.app/api/admin/profile`,
         { name, email, password, confirmPassword },
         config
       );
@@ -118,7 +118,7 @@ export const getAdminUserDetails = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/admin/profile`,
+        `https://pizza-server-three.vercel.app/api/admin/profile`,
         config
       );
 
@@ -151,7 +151,7 @@ export const listAdminUsers = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/admin`,
+        `https://pizza-server-three.vercel.app/api/admin`,
         config
       );
 
@@ -184,7 +184,7 @@ export const getAdminUserDetailsById = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/admin/${id}`,
+        `https://pizza-server-three.vercel.app/api/admin/${id}`,
         config
       );
 
@@ -221,7 +221,7 @@ export const updateAdminUserById = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/admin/${id}`,
+        `https://pizza-server-three.vercel.app/api/admin/${id}`,
         { name, email, role, permissions, isApproved },
         config
       );
@@ -255,7 +255,7 @@ export const deleteAdminUserById = createAsyncThunk(
       };
 
       const { data } = await axios.delete(
-        `${import.meta.env.VITE_SERVER_URL}/admin/${id}`,
+        `https://pizza-server-three.vercel.app/api/admin/${id}`,
         config
       );
 

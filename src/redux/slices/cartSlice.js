@@ -7,7 +7,7 @@ export const addToCart = createAsyncThunk(
   async ({ id, qty }, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/pizzas/${id}`
+        `https://pizza-server-three.vercel.app/api/pizzas/${id}`
       );
 
       return {
@@ -46,7 +46,7 @@ export const createRazorPayOrder = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/orders/checkout`,
+        `https://pizza-server-three.vercel.app/api/orders/checkout`,
         { amount, currency },
         config
       );

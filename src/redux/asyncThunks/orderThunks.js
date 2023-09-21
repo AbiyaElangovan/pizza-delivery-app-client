@@ -20,7 +20,7 @@ export const createOrder = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/orders`,
+        `https://pizza-server-three.vercel.app/api/orders`,
         {
           orderItems: orderData.orderItems,
           deliveryAddress: orderData.deliveryAddress,
@@ -61,7 +61,7 @@ export const listOrdersByUserId = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/orders/user`,
+        `https://pizza-server-three.vercel.app/api/orders/user`,
         config
       );
 
@@ -94,7 +94,7 @@ export const listOrders = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/orders`,
+        `https://pizza-server-three.vercel.app/api/orders`,
         config
       );
 
@@ -127,7 +127,7 @@ export const getOrderById = createAsyncThunk(
       };
 
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/orders/${id}`,
+        `https://pizza-server-three.vercel.app/api/orders/${id}`,
         config
       );
 
@@ -160,7 +160,7 @@ export const updateOrderById = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/orders/${id}`,
+        `https://pizza-server-three.vercel.app/api/orders/${id}`,
         { status },
         config
       );
@@ -194,7 +194,7 @@ export const deleteOrderById = createAsyncThunk(
       };
 
       const { data } = await axios.delete(
-        `${import.meta.env.VITE_SERVER_URL}/orders/${id}`,
+        `https://pizza-server-three.vercel.app/api/orders/${id}`,
         config
       );
 

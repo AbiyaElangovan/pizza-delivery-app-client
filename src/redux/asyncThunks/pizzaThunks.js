@@ -22,7 +22,7 @@ export const createPizza = createAsyncThunk(
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/pizzas`,
+        `https://pizza-server-three.vercel.app/api/pizzas`,
         {
           name: pizzaData.name,
           description: pizzaData.description,
@@ -56,7 +56,7 @@ export const listPizzas = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/pizzas`
+        `https://pizza-server-three.vercel.app/api/pizzas`
       );
 
       return data;
@@ -78,7 +78,7 @@ export const getPizzaById = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `${import.meta.env.VITE_SERVER_URL}/pizzas/${id}`
+        `https://pizza-server-three.vercel.app/api/pizzas/${id}`
       );
 
       return data;
@@ -124,7 +124,7 @@ export const updatePizzaById = createAsyncThunk(
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_SERVER_URL}/pizzas/${id}`,
+        `https://pizza-server-three.vercel.app/api/pizzas/${id}`,
         {
           name,
           description,
@@ -168,7 +168,7 @@ export const deletePizzaById = createAsyncThunk(
       };
 
       const { data } = await axios.delete(
-        `${import.meta.env.VITE_SERVER_URL}/pizzas/${id}`,
+        `https://pizza-server-three.vercel.app/api/pizzas/${id}`,
         config
       );
 
